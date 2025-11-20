@@ -16,3 +16,20 @@ Low-level malware-analysis string decoder written in **x86 Assembly (NASM)** for
 ```bash
 nasm -f elf32 decoder.asm -o decoder.o
 ld -m elf_i386 decoder.o -o decoder
+
+## USAGE
+```bash
+./decoder xor 41 48656C6C6F
+./decoder rot13 5572yyb
+./decoder caesar 3 486HZO
+
+Notes
+
+Written for malware RE workflows that require:
+
+fast decoding of obfuscated strings
+
+verification of embedded config blobs
+
+reversing small stagers or x86 shellcode
+
