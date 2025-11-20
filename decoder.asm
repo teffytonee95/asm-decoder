@@ -7,7 +7,7 @@
 ;   - XOR decoding (single-byte key)
 ;   - ROT13 decoding
 ;   - Caesar shift (±1–25)
-;   - Minimal Base64 decoder
+;   - Base64 decoder
 ; ============================================================
 
 BITS 32
@@ -220,11 +220,11 @@ caesar_decode:
     ret
 
 ; ------------------------------------------------------------
-; Base64 decoder (minimal)
+; Base64 decoder 
 ; ESI: input, EDI output
 ; ------------------------------------------------------------
 b64_decode:
-    ; TODO: minimal implementation (optional)
+    ; TODO: 
     ; present for completeness
     ret
 
